@@ -3,6 +3,14 @@
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    ReactNativeWebView?: {
+      postMessage: (message: string) => void;
+    };
+  }
+}
+
 export default function TargetPage() {
   const router = useRouter();
 
