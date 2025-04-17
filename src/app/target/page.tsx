@@ -13,9 +13,9 @@ export default function TargetPage() {
       payload: null,
     };
 
-    if (window.ReactNativeWebView) {
-      console.log("MessagePosted", JSON.stringify(res));
-    }
+    // if (window.ReactNativeWebView) {
+    //   console.log("MessagePosted", JSON.stringify(res));
+    // }
     window.ReactNativeWebView?.postMessage(JSON.stringify(res));
   }
 
